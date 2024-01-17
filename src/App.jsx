@@ -1,6 +1,7 @@
+import Contador from "./components/Contador";
 import Formulario from "./components/Formulario";
 import Header from "./components/Header";
-import ListaDeEstudantes from "./components/ListadeEstudantes";
+import ListaDeEstudantes from "./components/ListaDeEstudantes";
 import Rodape from "./components/Rodape";
 
 
@@ -9,8 +10,8 @@ function App() {
   <>
     <div style={{marginBottom: "130px"}}>
         <Header />
+        <Contador />
         <Formulario />
-        <ListaDeItens />
         <ListaDeEstudantes />
         <Rodape mensagem="Feito Por Larissa Bispo" />
     </div>  
