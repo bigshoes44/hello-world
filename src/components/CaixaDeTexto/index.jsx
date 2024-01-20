@@ -1,10 +1,15 @@
 import "./styles.css";
 
-const CaiXaDeTexto = ({label, placeholder}) => {
+const CaiXaDeTexto = ({ label, placeholder, handleChange, value}) => {
     return (
-        <div className="campo-texto"> 
+        <div  className="campo-texto"> 
             <label>{label}</label>
-            <input placeholder={placeholder}></input>
+            <input
+                value={value}
+                placeholder={placeholder} 
+                onChange={handleChange}
+            >
+            </input>
         </div>
                
     );
