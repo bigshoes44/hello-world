@@ -4,7 +4,9 @@ const Rodape = ({mensagem}) => {
     return (
         <footer>
             <p>{mensagem}</p>
+    
         </footer>
+        
     );
 };
 
