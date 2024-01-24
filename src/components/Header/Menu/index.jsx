@@ -18,6 +18,9 @@ const Menu = () => {
                 <li>
                     <Link className="menu-item" to="/pokemon">Pokemon Api</Link>
                 </li>
+                <li>
+                    <Link className="menu-item" to="/endereco">CEP API</Link>
+                </li>
             </ul>
         </nav>
 
