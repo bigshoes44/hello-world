@@ -86,4 +86,8 @@ export const estudantes = [
     comidaQueNaoGosta: "coxinha de jaca",
     experienciaPositiva: "fiz 30 anos e decidi estudar programação",
   },
+  foto: "https://photos.app.goo.gl/CxCZ17oeA3hQfhLh9"
+  nome: "Rosangela Santos Lambiase"
+  comidaQueGosta: "Costela Cozida"
+  experienciaPositva: "Ter conhecido a PretaLab"
 ];
