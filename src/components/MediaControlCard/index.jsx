@@ -40,7 +40,7 @@ const MediaControlCard = () => {
           <CardMedia
             component="img"
             sx={{ width: 151 }}
-            image="/public/download.jpg"
+            image="download.jpg"
             alt="Amarelo from Album Amarelo"
           />
         </Card>
