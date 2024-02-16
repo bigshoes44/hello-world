@@ -1,5 +1,5 @@
-import loading from "/assets";
 import "./styles.css";
+import { loading } from '/public';
 
 
 const Loading = () => {
