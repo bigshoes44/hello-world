@@ -2,12 +2,14 @@ import { useEffect } from "react";
 import { useState } from "react";
 import CardPokemon from "../../components/CardPokemon";
 import axios from "axios";
+import Loading from "../../components/Loading";
 import "./styles.css";
 
 
 const PokemonPage = () => {
         const [referenciasPokemons, setReferenciasPokemon] =  useState([]);
         const [listaPokemons, setListaPokemons] = useState([]);
+        const [removeLoading, setRemoveLoading] = useState(false);
         const pegar100Pokemons = async () => {
             try {
                 const resposta = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=100");
@@ -37,6 +39,7 @@ const PokemonPage = () => {
             }
 
             setListaPokemons(listaTemporaria);
+            setRemoveLoading(true);
         };
 
         useEffect(() => {
@@ -52,6 +55,8 @@ const PokemonPage = () => {
                 id={pokemon.id}
                 url={pokemon.forms[0].url} />
             ))}
+                {!removeLoading && <Loading />}
+            
             </div>
             
 
