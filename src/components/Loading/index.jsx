@@ -1,4 +1,4 @@
-import loading from "./public"
+import loading from "./assets"
 import "./styles.css";
 
 
