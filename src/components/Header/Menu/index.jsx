@@ -6,8 +6,12 @@ const Menu = () => {
     return (
         <nav>
             <ul className="menu">
+
                 <li>
                     <Link className="menu-item" to="/">Home</Link>
+                </li>
+                <li>
+                    <Link className="menu-item" to="/card">BlackCards</Link>
                 </li>
                 <li>
                     <Link className="menu-item" to="/contador">Counter</Link>

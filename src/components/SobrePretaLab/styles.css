@@ -1,0 +1,84 @@
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section {
+    margin: auto;
+    width: 100%;
+}
+
+.sub-section {
+    background-color: #dbd9d9;
+    width: 100%;
+     
+}
+
+
+h1 {
+    font-size: 1.75em;
+}
+
+h2 {
+    font-size: 1.25em;
+}
+
+h1 , h3 {
+    color: #FF4DBC;
+}
+
+h2, h4 {
+    color: #837F85;
+}
+
+section ul {
+    max-width: 760px;
+    margin: auto;
+}
+
+ul, ol {
+    list-style: none;
+
+}
+
+.foto-pretalab {
+    background-color: #281738;
+    width: 125px;
+    height: 125px;    
+    padding: 5px;
+}
+
+.foto-pretalab:hover {
+    opacity: 0.6;
+}
+
+
+.inicial {
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.inicial p {
+    
+    padding: 60px;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 16px;
+    line-height: 22px;
+    
+}
+
+#formacao h3 {
+    margin-bottom: 60px;
+}
+
+#formacao h4, li a, p {
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+}

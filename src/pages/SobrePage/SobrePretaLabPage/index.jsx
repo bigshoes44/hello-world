@@ -1,5 +1,17 @@
+import SobrePretaLab from "../../../components/SobrePretaLab";
+import MediaControlCard from "../../../components/MediaControlCard";
+
 const SobrePretaLabPage = () => {
-    return <h1> Sobre Preta Lab Teste</h1>
+    return (
+        <>
+             <MediaControlCard />
+             <SobrePretaLab />
+             
+        </>
+
+       
+
+    ) 
 
 };
 

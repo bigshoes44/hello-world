@@ -4,16 +4,42 @@ import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 import TextField  from "@mui/material/TextField";
 import { useState } from "react";
+import axios from "axios";
 import Button from "@mui/material/Button";
 
 
 const EnderecoPage = () => {
+    
     const [cep, setCep] = useState("");
-    const [rua, setRua] = useState("");
-    const [cidade, setCidade] = useState("")
-    const {estado, setEstado} = useState("");
-    const [latitude, setLatitude] = useState("");
-    const [longitude, setLongitude] = useState("");
+    const [endereco, setEndereco] = useState({
+        rua:"",
+        cidade:"",
+        estado:"",
+        latitude:"",
+        longitude:"",
+    });
+
+    const consultarCEP = async () => {
+        try {
+            const resposta = await axios.get('https://brasilapi.com.br/api/cep/v2/${cep}');
+
+            const enderecoResposta = resposta.data;
+
+            setEndereco({
+                rua: enderecoResposta.street,
+                cidade: enderecoResposta.city,
+                estado: enderecoResposta.state,
+                latitude: enderecoResposta.location.coordinates.latitude,
+                longitude: enderecoResposta.location.coordinates.longitude,
+            });
+
+        }catch (erro) {
+            console.erro("Esse cep pode ser lá onde Judas entrou e saiu descalço");
+        }
+    };
+
+    
+
     return (
         <Box 
         display="flex"
@@ -35,16 +61,16 @@ const EnderecoPage = () => {
             value={cep}
             onChange={(event) => setCep(event.target.value)}
             />
-            <Button variant="contained">Buscar</Button>
+            <Button variant="contained" onClick={() => consultarCEP()}>Buscar</Button>
         </Stack>
             
             
         <Stack width="70vh" gap={2} marginTop={4}>
-            <TextField label="Rua" fullWidth readOnly value={rua}/>
-            <TextField label="Cidade" fullWidth readOnly value={cidade} />
-            <TextField label="Estado" fullWidth readOnly value={estado} />
-            <TextField label="Latitude" fullWidth readOnly value={latitude} />
-            <TextField label="Longitude" fullWidth readOnly value={longitude} />
+            <TextField label="Rua" fullWidth readOnly value={endereco.rua}/>
+            <TextField label="Cidade" fullWidth readOnly value={endereco.cidade} />
+            <TextField label="Estado" fullWidth readOnly value={endereco.estado} />
+            <TextField label="Latitude" fullWidth readOnly value={endereco.latitude}/>
+            <TextField label="Longitude" fullWidth readOnly value={endereco.longitude} />
         </Stack>
 
 

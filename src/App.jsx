@@ -10,6 +10,7 @@ import SobrePretaLabPage from "./pages/SobrePage/SobrePretaLabPage";
 import PokemonPage from "./pages/PokemonPage";
 import EnderecoPage from "./pages/EnderecoPage";
 
+
 function App() {
   
   return (
@@ -17,7 +18,8 @@ function App() {
       <Header />
         <div style={{marginBottom: "130px"}}>
             <Routes>
-              <Route path='/' element={<InicioPage />} />
+              <Route path="/" element={<SobremimPage />} />
+              <Route path='/card' element={<InicioPage />} />
               <Route path="/contador" element={<ContadorPage />} />
               <Route path="/pokemon" element={<PokemonPage />} />
               <Route path="/endereco" element={<EnderecoPage />} />
@@ -31,12 +33,12 @@ function App() {
             
             
           </div>
-      <Rodape mensagem="Feito Por Larissa Bispo" />
+      <Rodape mensagem= "Feito Por Larissa Bispo" />
           
 
   </>
     
  );
-}
+};
 
 export default App;
