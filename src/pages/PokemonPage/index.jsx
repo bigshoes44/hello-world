@@ -19,6 +19,9 @@ const PokemonPage = () => {
             } catch (error) {
                 console.error("Erro ao buscar os pokemons", error);
             }
+
+            setListaPokemons(pegar100Pokemons);
+            setRemoveLoading(true);
             
         };
 
