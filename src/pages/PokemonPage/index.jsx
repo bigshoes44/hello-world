@@ -43,7 +43,7 @@ const PokemonPage = () => {
             }
 
             setListaPokemons(listaTemporaria);
-            setRemoveLoading(true);
+            
         };
 
         useEffect(() => {
