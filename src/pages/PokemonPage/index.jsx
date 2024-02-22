@@ -27,7 +27,7 @@ const PokemonPage = () => {
         }, []);
 
         const pegarListaDePokemons = async () => {
-            setRemoveLoading(true);
+            
             const listaTemporaria = [];
             
             
