@@ -7,7 +7,7 @@ const SobreMim = () => {
                 <section>
                     <article class="article-container">
                         <figure>
-                            <img class="foto-perfil" src="avatar.png" alt="Mulher negra sorrindo, usando óculos
+                            <img class="foto-perfil" src="/avatar.png" alt="Mulher negra sorrindo, usando óculos
                             tranças pretas, aparelho ortodontico nos dentes e um mar ao fundo. "/>
                         </figure>
                         <div>

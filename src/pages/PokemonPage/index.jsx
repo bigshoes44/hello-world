@@ -11,6 +11,7 @@ const PokemonPage = () => {
         const [listaPokemons, setListaPokemons] = useState([]);
         const [removeLoading, setRemoveLoading] = useState(false);
         const pegar100Pokemons = async () => {
+            
             try {
                 const resposta = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=100");
                 setReferenciasPokemon(resposta.data.results);
@@ -24,8 +25,11 @@ const PokemonPage = () => {
             pegar100Pokemons();
         }, []);
 
+        setRemoveLoading(true);
+
         const pegarListaDePokemons = async () => {
             const listaTemporaria = [];
+            
             
             for(const referencia of referenciasPokemons) {
                 try{

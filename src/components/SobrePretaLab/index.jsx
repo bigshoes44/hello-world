@@ -8,7 +8,7 @@ const SobrePretaLab = () => {
                 <section>
                     <article class="inicial">
                         <figure>
-                            <img class="foto-pretalab" src="pretalab.png" alt="Logo com o nome Preta Lab. "/>
+                            <img class="foto-pretalab" src="/pretalab.png" alt="Logo com o nome Preta Lab. "/>
                         </figure>
                         <div>
                                 <h1> <b> Uma plataforma que conecta mulheres negras <br /> </b>
