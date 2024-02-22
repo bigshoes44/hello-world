@@ -26,9 +26,8 @@ const PokemonPage = () => {
             pegar100Pokemons();
         }, []);
 
-        setRemoveLoading(true);
-
         const pegarListaDePokemons = async () => {
+            setRemoveLoading(true);
             const listaTemporaria = [];
             
             
@@ -44,7 +43,7 @@ const PokemonPage = () => {
             }
 
             setListaPokemons(listaTemporaria);
-            
+            setRemoveLoading(true);
         };
 
         useEffect(() => {
