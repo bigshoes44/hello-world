@@ -19,6 +19,7 @@ const PokemonPage = () => {
             } catch (error) {
                 console.error("Erro ao buscar os pokemons", error);
             }
+            
         };
 
         useEffect(() => {
@@ -43,7 +44,7 @@ const PokemonPage = () => {
             }
 
             setListaPokemons(listaTemporaria);
-            
+            setRemoveLoading(true);
         };
 
         useEffect(() => {
